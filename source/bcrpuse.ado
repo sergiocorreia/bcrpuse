@@ -69,7 +69,7 @@ program define bcrpuse
 
 	if (`download') {
 		if ("`cachepath'" != "") {
-			loc fn "`cachepath'/`hash'.csv"
+			loc fn "`cachepath'/`hash'"
 		}
 		else {
 			tempfile fn
