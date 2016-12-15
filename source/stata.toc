@@ -1,0 +1,10 @@
+v 3
+d Sergio Correia, Duke University (sergio.correia@gmail.com)
+p bcrpuse BCRPUSE - Import data from the Peruvian Central Bank BCRP)
+
+* l word-to-show path-or-url [description]
+* t: Directories within site:
+* t path [description]
+* Packages:
+* p pkgname [description]
+

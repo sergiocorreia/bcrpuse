@@ -1,0 +1,17 @@
+v 3
+
+d bcrpuse. Import data from the Peruvian Central Bank BCRP)
+d
+d Author: Sergio Correia.
+d
+d KW: use
+d KW: bcrp
+d KW: import
+d
+d Requires: Stata version 13.1
+d
+d Distribution-Date: 20161215
+d
+
+f bcrpuse.ado
+f bcrpuse.sthlp
