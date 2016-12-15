@@ -127,7 +127,11 @@ program define bcrpuse
 	loc backup_series `series'
 	foreach var of local vars {
 		loc label = `var'[1]
+		loc label = subinstr("`label'", "&aacute;", "a", .)
 		loc label = subinstr("`label'", "&eacute;", "e", .)
+		loc label = subinstr("`label'", "&iacute;", "i", .)
+		loc label = subinstr("`label'", "&oacute;", "o", .)
+		loc label = subinstr("`label'", "&uacute;", "u", .)
 		la var `var' "`label'"
 		gettoken s series : series
 		rename `var' `s'
