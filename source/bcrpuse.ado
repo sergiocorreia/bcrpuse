@@ -76,15 +76,14 @@ program define bcrpuse
 		}
 		if (`verbose') di as text " - downloading series"
 		copy "`url'" "`fn'"
+		// Avoid overloading their server
+		sleep `sleep'
 	}
 
 	// Load CSV
 	qui import delimited using "`fn'", ///
 		delim("\t") varnames(nonames) case(preserve) asdouble
 	qui drop if missing(v1) // empty row added at the end
-
-	// Avoid overloading their server
-	sleep `sleep'
 
 	// Time variable
 	qui {
