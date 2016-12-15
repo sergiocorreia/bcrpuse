@@ -1,25 +1,31 @@
 discard
 adopath + "c:/git/bcrpuse/source"
 
-cls
-clear
-set more off
-set trace off
-
-clear
-
-bcrpuse PN01288PM PN01289PM, verbose range(2001m1 2012m12)
-
-bcrpuse PN01288PM PN01289PM, verbose clear
+* Setup
+	cls
+	clear
+	set more off
+	set trace off
 
 
-clear
+* Simplest usage
+	bcrpuse PN01288PM
 
-bcrpuse PN01288PM, verbose range(2001m1 2012m12) savepath(c:\git\borrar)
+* Multiple series and time range
+	clear
+	bcrpuse PN01288PM PN01289PM, verbose range(2001m1 2012m12)
 
-clear
+* Simple options
+	bcrpuse PN01288PM PN01289PM, verbose clear sleep(0.6)
 
+* Other frequencies
+	bcrpuse PN03492MQ, clear range(2001q1 2010q4)
+	bcrpuse PD04658MD, clear range(1jan1999 31dec2002)
+	bcrpuse PM06069MA, clear range(2007 2009)
 
-bcrpuse PN01288PM, verbose range(2001m1 2012m12) usepath(c:\git\borrar)
+* Data cache
+	bcrpuse PN01288PM PN01289PM, clear verbose range(2001m1 2012m12) cache(c:\git\borrar)
+	bcrpuse PN01288PM PN01289PM, clear verbose range(2001m1 2012m12) cachepath(c:\git\borrar)
+	bcrpuse PN01288PM PN01289PM, clear verbose range(2001m1 2010m12) cachep(c:\git\borrar)
 
 exit
